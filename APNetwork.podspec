@@ -15,10 +15,10 @@ Pod::Spec.new do |s|
 APNetwork is base on YTKNetwork and AFNetworking.
                        DESC
 
-  s.homepage         = 'http://coderepo.aipai.com:39399/jasxio/APNetwork'
+  s.homepage         = 'https://github.com/673697831/APNetwork'
   s.license          = "MIT"
   s.author           = { '673697831' => '673697831@qq.com' }
-  s.source           = { :git => 'git@coderepo.aipai.com:jasxio/APNetwork.git', :branch => "dev", :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/673697831/APNetwork.git', :tag => s.version.to_s }
 
   s.ios.deployment_target = '7.0'
 
