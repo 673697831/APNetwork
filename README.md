@@ -17,7 +17,7 @@ APNetwork is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'APNetwork', git: 'git@coderepo.aipai.com:jasxio/APNetwork.git', branch: 'dev'
+pod 'APNetwork', git: 'https://github.com/673697831/APNetwork.git'
 ```
 
 ## Author
