@@ -1,0 +1,32 @@
+{
+  "name": "APNetwork",
+  "version": "0.1.0",
+  "summary": "I am a network.",
+  "description": "APNetwork is base on YTKNetwork and AFNetworking.",
+  "homepage": "http://coderepo.aipai.com:39399/jasxio/APNetwork",
+  "license": "MIT",
+  "authors": {
+    "673697831": "673697831@qq.com"
+  },
+  "source": {
+    "git": "git@coderepo.aipai.com:jasxio/APNetwork.git",
+    "branch": "dev",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "7.0"
+  },
+  "source_files": "Classes/*.{h,m}",
+  "requires_arc": true,
+  "dependencies": {
+    "YTKNetwork": [
+      "~> 1.3.0"
+    ],
+    "SDWebImage": [
+      "~> 3.7.1"
+    ],
+    "APStore": [
+
+    ]
+  }
+}

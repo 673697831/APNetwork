@@ -1,0 +1,16 @@
+
+platform :ios, '7.0'
+
+source 'https://github.com/CocoaPods/Specs.git'
+
+target 'APNetwork_Example' do
+  pod 'APNetwork', :path => '../'
+ 
+  pod 'MBProgressHUD', '~> 0.9.1'
+
+  target 'APNetwork_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
