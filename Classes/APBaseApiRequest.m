@@ -98,7 +98,7 @@ NSString * const APApiRequestRepeatCountAttributeName = @"com.aipai.network.requ
     NSDictionary *params = self.params;
     Class aClass = self.responseClass;
     
-    [self startWithCacheStore:cacheStore responseSerializer:responseSerializer requestDelegates:requestDelegates success:success failure:false url:url method:method params:params aClass:aClass];
+    [self startWithCacheStore:cacheStore responseSerializer:responseSerializer requestDelegates:requestDelegates success:success failure:failure url:url method:method params:params aClass:aClass];
 }
 
 - (void)cancel
