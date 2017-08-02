@@ -7,6 +7,8 @@ target 'APNetwork_Example' do
   pod 'APNetwork', :path => '../'
  
   pod 'MBProgressHUD', '~> 0.9.1'
+  pod 'APStore', git: 'https://github.com/673697831/APStore.git'
+  pod 'YYModel', '~> 1.0.4'
 
   target 'APNetwork_Tests' do
     inherit! :search_paths

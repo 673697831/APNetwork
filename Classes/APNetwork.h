@@ -15,6 +15,7 @@
 #import <APNetwork/APNetworkProtocol.h>
 #import <APNetwork/APBatchRequest.h>
 #import <APNetwork/APDownloadImageRequest.h>
+#import <APNetwork/APNetworkGlobalConfig.h>
 
 #else
 
@@ -22,6 +23,7 @@
 #import "APNetworkProtocol.h"
 #import "APBatchRequest.h"
 #import "APDownloadImageRequest.h"
+#import "APNetworkGlobalConfig.h"
 
 #endif /* __has_include */
 

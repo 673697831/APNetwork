@@ -25,30 +25,55 @@ PODS:
   - APNetwork (0.1.0):
     - SDWebImage (~> 3.7.1)
     - YTKNetwork (~> 1.3.0)
+  - APStore (0.1.0):
+    - APStore/APKeyValueStore (= 0.1.0)
+  - APStore/APKeyValueStore (0.1.0):
+    - FMDB/SQLCipher (~> 2.6.2)
+  - FMDB/SQLCipher (2.6.2):
+    - SQLCipher
   - MBProgressHUD (0.9.2)
   - SDWebImage (3.7.6):
     - SDWebImage/Core (= 3.7.6)
   - SDWebImage/Core (3.7.6)
+  - SQLCipher (3.1.0):
+    - SQLCipher/standard (= 3.1.0)
+  - SQLCipher/common (3.1.0)
+  - SQLCipher/standard (3.1.0):
+    - SQLCipher/common
   - YTKNetwork (1.3.0):
     - AFDownloadRequestOperation (~> 2.0)
     - AFNetworking (~> 2.0)
+  - YYModel (1.0.4)
 
 DEPENDENCIES:
   - APNetwork (from `../`)
+  - APStore (from `https://github.com/673697831/APStore.git`)
   - MBProgressHUD (~> 0.9.1)
+  - YYModel (~> 1.0.4)
 
 EXTERNAL SOURCES:
   APNetwork:
     :path: ../
+  APStore:
+    :git: https://github.com/673697831/APStore.git
+
+CHECKOUT OPTIONS:
+  APStore:
+    :commit: ad3aae376447ace732baa8cef7f54512fb42f09f
+    :git: https://github.com/673697831/APStore.git
 
 SPEC CHECKSUMS:
   AFDownloadRequestOperation: 748a1643423e1ddb23f2178f778087d4f0ae8ac7
   AFNetworking: cb8d14a848e831097108418f5d49217339d4eb60
-  APNetwork: b058ea337592089b279bb3adad8421de711fb37e
+  APNetwork: 38b0dab90c74a7f4826262a9db1519a68a4da494
+  APStore: c47bd9a34ea716ca6adc80889ae719e49c5dd72a
+  FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
   MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
   SDWebImage: c325cf02c30337336b95beff20a13df489ec0ec9
+  SQLCipher: 4684434d5791db86512cd7e02172aefba575849e
   YTKNetwork: a9fdf7968deefb06a58d988148558453005564c4
+  YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: 81e87d6ce2713fdc22ee1e67d112659ce35f6989
+PODFILE CHECKSUM: b18fd251bef26acfb2202ea7fb15d39d9833b376
 
 COCOAPODS: 1.2.1

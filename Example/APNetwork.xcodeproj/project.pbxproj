@@ -34,6 +34,8 @@
 		691073641EB1CAF4009F3347 /* APApiRequest+HUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 691073631EB1CAF4009F3347 /* APApiRequest+HUD.m */; };
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
+		8C49F4EF1F31832800C13140 /* APURLCacheManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C49F4EE1F31832800C13140 /* APURLCacheManager.m */; };
+		8C49F4F41F31AC4400C13140 /* NSString+LZAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C49F4F31F31AC4400C13140 /* NSString+LZAdd.m */; };
 		E025B349C5BA9B73E5C7F93D /* libPods-APNetwork_Example.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 046D9D43D8C6D78069BA53AA /* libPods-APNetwork_Example.a */; };
 /* End PBXBuildFile section */
 
@@ -98,6 +100,10 @@
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		79B5387DF109C7D8F059B707 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8C49F4ED1F31832800C13140 /* APURLCacheManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APURLCacheManager.h; sourceTree = "<group>"; };
+		8C49F4EE1F31832800C13140 /* APURLCacheManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APURLCacheManager.m; sourceTree = "<group>"; };
+		8C49F4F21F31AC4400C13140 /* NSString+LZAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+LZAdd.h"; sourceTree = "<group>"; };
+		8C49F4F31F31AC4400C13140 /* NSString+LZAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+LZAdd.m"; sourceTree = "<group>"; };
 		A31D2575C847AA66B4FA3D16 /* libPods-APNetwork_Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-APNetwork_Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8329A87FDC0A38C6CC172FC /* APNetwork.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = APNetwork.podspec; path = ../APNetwork.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -165,6 +171,8 @@
 		6003F593195388D20070C39A /* Example for APNetwork */ = {
 			isa = PBXGroup;
 			children = (
+				8C49F4F11F31ABCE00C13140 /* Category */,
+				8C49F4EC1F3182D700C13140 /* logic */,
 				6910735E1EB1C784009F3347 /* Accessory */,
 				6910735A1EB1C62B009F3347 /* BlackMagic */,
 				691073431EB07C95009F3347 /* Core */,
@@ -278,6 +286,24 @@
 				691073631EB1CAF4009F3347 /* APApiRequest+HUD.m */,
 			);
 			name = Accessory;
+			sourceTree = "<group>";
+		};
+		8C49F4EC1F3182D700C13140 /* logic */ = {
+			isa = PBXGroup;
+			children = (
+				8C49F4ED1F31832800C13140 /* APURLCacheManager.h */,
+				8C49F4EE1F31832800C13140 /* APURLCacheManager.m */,
+			);
+			name = logic;
+			sourceTree = "<group>";
+		};
+		8C49F4F11F31ABCE00C13140 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				8C49F4F21F31AC4400C13140 /* NSString+LZAdd.h */,
+				8C49F4F31F31AC4400C13140 /* NSString+LZAdd.m */,
+			);
+			name = Category;
 			sourceTree = "<group>";
 		};
 		A806DB62923AC495ADADF87A /* Pods */ = {
@@ -505,6 +531,8 @@
 				6003F59A195388D20070C39A /* main.m in Sources */,
 				691073461EB07CD0009F3347 /* APResponseSerializer.m in Sources */,
 				691073591EB1BF9F009F3347 /* APViewModel.m in Sources */,
+				8C49F4F41F31AC4400C13140 /* NSString+LZAdd.m in Sources */,
+				8C49F4EF1F31832800C13140 /* APURLCacheManager.m in Sources */,
 				691073491EB07CF8009F3347 /* APApiRequest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

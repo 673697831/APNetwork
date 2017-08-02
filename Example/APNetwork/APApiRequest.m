@@ -8,6 +8,7 @@
 
 #import "APApiRequest.h"
 #import "APResponseSerializer.h"
+#import "APURLCacheManager.h"
 
 @implementation APApiRequest
 
@@ -15,6 +16,7 @@
 {
     if (self = [super init]) {
         self.responseSerializer = [APResponseSerializer new];
+        self.cacheStore = [APURLCacheManager sharedManager];
     }
     
     return self;

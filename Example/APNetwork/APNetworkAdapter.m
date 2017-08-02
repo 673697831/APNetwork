@@ -23,7 +23,7 @@
     request.params = params;
     request.responseClass = aClass;
     request.shouldCahcheResult = NO;
-    request.timeoutInterval = 0.001;
+    request.timeoutInterval = 10;
     request.attributes = @{APApiRequestRepeatCountAttributeName:@(3)};
     __weak typeof(request) weakRequest = request;
     request.successBlock = ^(id response) {

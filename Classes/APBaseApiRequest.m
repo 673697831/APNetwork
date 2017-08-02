@@ -7,6 +7,7 @@
 //
 
 #import "APBaseApiRequest.h"
+#import "APNetworkGlobalConfig.h"
 #if __has_include(<YTKNetwork/YTKNetwork.h>)
 #import <YTKNetwork/YTKNetwork.h>
 #else
@@ -150,8 +151,6 @@ NSString * const APApiRequestRepeatCountAttributeName = @"com.aipai.network.requ
         NSMutableDictionary *dic = [NSMutableDictionary dictionaryWithDictionary:self.attributes];
         dic[APApiRequestRepeatCountAttributeName] = @(repeatCount);
         self.attributes = dic;
-        
-        NSLog(@"repeatCount ===%d", repeatCount);
         return repeatCount >= 0;
         
     }
@@ -182,9 +181,11 @@ NSString * const APApiRequestRepeatCountAttributeName = @"com.aipai.network.requ
         }
         
         if (error) {
-            NSLog(@"LZRequest: FAILURE\nURL:%@ \nMETHOD:%@ "
-                  @"\nPARAMS:\n%@\nResponse:%@\nError:%@",
-                  url, method, params, request.responseJSONObject, error);
+            if ([APNetworkGlobalConfig shareConfig].debugLogEnabled) {
+                NSLog(@"LZRequest: FAILURE\nURL:%@ \nMETHOD:%@ "
+                      @"\nPARAMS:\n%@\nResponse:%@\nError:%@",
+                      url, method, params, request.responseJSONObject, error);
+            }
             if (failure) {
                 failure(request.responseJSONObject, error);
             }
@@ -194,9 +195,11 @@ NSString * const APApiRequestRepeatCountAttributeName = @"com.aipai.network.requ
             }
         }else
         {
-            NSLog(@"LZRequest: SUCCESS\nURL:%@ \nMETHOD:%@ "
-                  @"\nPARAMS:\n%@\nResponse:%@\nObject:%@",
-                  url, method, params, request.responseJSONObject, responseObject);
+            if ([APNetworkGlobalConfig shareConfig].debugLogEnabled) {
+                NSLog(@"LZRequest: SUCCESS\nURL:%@ \nMETHOD:%@ "
+                      @"\nPARAMS:\n%@\nResponse:%@\nObject:%@",
+                      url, method, params, request.responseJSONObject, responseObject);
+            }
             
             if (cacheStore) {
                 [cacheStore setObj:responseObject url:url params:params];
@@ -211,9 +214,11 @@ NSString * const APApiRequestRepeatCountAttributeName = @"com.aipai.network.requ
             
         }
     } failure:^(__kindof YTKBaseRequest * _Nonnull request) {
-        NSLog(@"LZRequest: FAILURE\nURL:%@ \nMETHOD:%@ "
-              @"\nPARAMS:\n%@\nResponse:%@\nError:%@",
-              url, method, params, request.responseJSONObject, request.requestOperationError);
+        if ([APNetworkGlobalConfig shareConfig].debugLogEnabled) {
+            NSLog(@"LZRequest: FAILURE\nURL:%@ \nMETHOD:%@ "
+                  @"\nPARAMS:\n%@\nResponse:%@\nError:%@",
+                  url, method, params, request.responseJSONObject, request.requestOperationError);
+        }
         
         //超时自动重连
         if ([self shouldReStartWithError:request.requestOperationError]) {

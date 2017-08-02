@@ -8,14 +8,27 @@
 
 #import "APAppDelegate.h"
 #import "APBlackMagic.h"
+#import "APNetworkApi.h"
 
 @implementation APAppDelegate
+
+#pragma mark -
+
+- (void)loadConfig
+{
+    APApiRequest *request = [[APNetworkApi sharedInstance].indexPageApi requestConfigWithSuccess:nil failure:nil];
+    [request start];
+}
+
+#pragma mark -
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
     
     [APBlackMagic blackMagic];
+    [APNetworkGlobalConfig shareConfig].debugLogEnabled = YES;
+    [self loadConfig];
     return YES;
 }
 

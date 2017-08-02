@@ -3,14 +3,13 @@
   "version": "0.1.0",
   "summary": "I am a network.",
   "description": "APNetwork is base on YTKNetwork and AFNetworking.",
-  "homepage": "http://coderepo.aipai.com:39399/jasxio/APNetwork",
+  "homepage": "https://github.com/673697831/APNetwork",
   "license": "MIT",
   "authors": {
     "673697831": "673697831@qq.com"
   },
   "source": {
-    "git": "git@coderepo.aipai.com:jasxio/APNetwork.git",
-    "branch": "dev",
+    "git": "https://github.com/673697831/APNetwork.git",
     "tag": "0.1.0"
   },
   "platforms": {

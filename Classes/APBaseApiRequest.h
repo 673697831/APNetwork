@@ -23,7 +23,7 @@ typedef NS_ENUM(NSInteger, APRequestMethod) {
 @interface APBaseApiRequest : NSObject<APBaseApiRequestProtocol, APBaseRequestDataSource>
 
 //cacheStore 类型
-@property (nonatomic, strong) id<APCacheURLStoreProtocol> cacheStore;
+@property (nonatomic, weak) id<APCacheURLStoreProtocol> cacheStore;
 //回调序列化
 @property (nonatomic, strong) id<APResponseSerializerProtocol> responseSerializer;
 //额外属性
